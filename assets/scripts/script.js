@@ -1,10 +1,11 @@
+  
 function simpleCalendar() {
     $(document).ready(function () {
       let momentVar = moment().format('dddd, MMMM Do, YYYY h:mm a');
       let workHours = ["9 a.m.", "10 a.m.", "11 a.m.", "12 p.m.", "1 p.m.", "2 p.m.", "3 p.m.", "4 p.m.",
         "5 p.m."]
-        
-      //the current day is displayed at the top of the calendar
+  
+      // current day is displayed at the top of the calendar
       function currentDay() {
         let currentDay = $("#currentDay").text(momentVar);
         return currentDay;
@@ -13,8 +14,8 @@ function simpleCalendar() {
       currentDay();
       let row;
       let timeCol;
-      
-      // presented with timeblocks for standard business hours
+  
+      //presented with timeblocks for standard business hours
       for (i = 0; i < workHours.length; i++) {
         let row = $("<div>").addClass("row");
         let timeCol = $("<text-area>").text(workHours[i]).addClass("hour");
@@ -23,7 +24,6 @@ function simpleCalendar() {
         $(row).append(timeCol).append(inputCol).append(saveBtn);
         $("#calendar").append(row);
       }
-
   
       //for loop to add id's to input fields
       function addIdToInput() {
@@ -34,7 +34,6 @@ function simpleCalendar() {
         }
       };
       addIdToInput();
-  
   
       //for loop to add id's to save buttons
       function addIdToSaveBtn() {
@@ -142,7 +141,7 @@ function simpleCalendar() {
       });
       let savedInput9 = (localStorage.getItem("toDo9"));
       toDoInput9.val(savedInput9);
-      
+  
       // start if else statements to show past, present, future events
   
       let now = new Date().getHours();
