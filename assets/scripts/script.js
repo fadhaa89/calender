@@ -13,4 +13,15 @@ function simpleCalendar() {
       currentDay();
       let row;
       let timeCol;
+      
+      // presented with timeblocks for standard business hours
+      for (i = 0; i < workHours.length; i++) {
+        let row = $("<div>").addClass("row");
+        let timeCol = $("<text-area>").text(workHours[i]).addClass("hour");
+        let inputCol = $("<input>").attr("placeholder", "Enter note here").addClass("toDo-input time-block");
+        saveBtn = $("<button>").addClass("btn btn-primary saveBtn").text("save");
+        $(row).append(timeCol).append(inputCol).append(saveBtn);
+        $("#calendar").append(row);
+      }
+  
   
