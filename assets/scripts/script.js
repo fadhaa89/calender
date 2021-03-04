@@ -23,5 +23,16 @@ function simpleCalendar() {
         $(row).append(timeCol).append(inputCol).append(saveBtn);
         $("#calendar").append(row);
       }
+
+  
+      //for loop to add id's to input fields
+      function addIdToInput() {
+        let inputId = document.getElementsByClassName("toDo-input");
+        let length = inputId.length;
+        for (i = 0; i < length; i++) {
+          inputId[i].id = "input-field-" + (i + 1);
+        }
+      };
+      addIdToInput();
   
   
