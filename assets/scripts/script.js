@@ -144,9 +144,9 @@ function simpleCalendar() {
     // start if else statements to show past, present, future events
 
     let now = new Date().getHours();
-    now -= 5
+    //now -= 5
     console.log ("now ",now );
-    // this is suposed to be 09am//
+    // 09am 
     if (now == 9) {
       $("#input-field-1").addClass("presnt");
     } else if ( now > 9) {
