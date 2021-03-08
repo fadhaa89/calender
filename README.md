@@ -8,11 +8,12 @@ clone the repo
 # example 
 ![Example Gif](./assets/image/example.gif)
  
-# deployed
-
-
 # repo
 
+https://github.com/fadhaa89/calender
+
+# deployed
+https://fadhaa89.github.io/calender/.
 
 # author 
 name : Fadhaa Abdullah <br>
